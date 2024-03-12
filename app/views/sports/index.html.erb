@@ -1,0 +1,17 @@
+<h1>自分の題名</h1>
+<h3>一覧ページ</h3>
+<%= link_to "新規投稿へ", new_sport_path %>
+<div class="sports-container">
+  <% @sports.each do |t| %>
+    <div class="sport">
+    <%= image_tag t.image_url, size: "250x200" if t.image? %>
+      <%= t.theme %>
+      <%= t.about %>
+      <%= t.created_at %>
+      <%= link_to "詳細へ", sport_path(t.id) %>
+      <%= link_to "編集する", edit_sport_path(t.id) %>
+      <%= button_to "削除する", sport_path(t.id), method: :delete %>
+    </div>
+  <% end %>
+  <%= link_to "カレンダー", blogs_path %>
+</div>

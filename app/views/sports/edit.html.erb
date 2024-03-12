@@ -1,0 +1,7 @@
+<%= form_for @sport do |f| %>
+    <%= f.label :theme %>
+    <%= f.label :about %>
+    <%= f.text_field :theme, :size => 140 %> 
+    <%= f.text_field :about, :size => 140 %> 
+    <%= f.submit "編集する" %>
+  <% end %>

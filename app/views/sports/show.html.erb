@@ -1,0 +1,10 @@
+<h1>GeekTwitter</h1>
+<h3>Tweet詳細</h3>
+<div class="sport">
+  <p><%= @sport.theme %></p>
+  <p><%= @sport.about %></p>
+  <p><%= @sport.created_at %></p>
+</div>
+
+<%= link_to "Tweet一覧に戻る", sports_path %>
+<%= link_to "編集する", edit_sport_path(@sport.id) %>
