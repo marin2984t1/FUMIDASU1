@@ -1,10 +1,11 @@
-<h1>GeekTwitter</h1>
-<h3>Tweet詳細</h3>
+<h1>日記</h1>
 <div class="sport">
+<%= image_tag @sport.image_url, size: "250x200" if @sport.image? %>
   <p><%= @sport.theme %></p>
   <p><%= @sport.about %></p>
   <p><%= @sport.created_at %></p>
+  <%= button_to "編集する", edit_sport_path(@sport.id) %>
+  <%= button_to "削除する", sport_path(@sport.id), method: :delete %>
 </div>
 
-<%= link_to "Tweet一覧に戻る", sports_path %>
-<%= link_to "編集する", edit_sport_path(@sport.id) %>
+<%= link_to "一覧に戻る", sports_path %>

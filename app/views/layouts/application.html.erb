@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>FUMIDASU1</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+
+    <title>背景画像の挿入</title>
+    <link rel="stylesheet" href="example.css">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -12,22 +17,34 @@
 
   <body>
     <header>
-      <h1>    FUMIDASU</h1>
-      <div class="header-list">
+          <%= link_to sports_top_path do %>
+            <%= image_tag 'FUMIDASU_logo', :size => '80x80'%>
+            <%end%>
+
+       <h1>FUMIDASU</h1>
+       <div class="header-list">
         <ul>
           <% if user_signed_in? %>
-            <li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to "一覧へ", sports_path %></li>
+            <li><%= link_to "カレンダー", blogs_path %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
           <% else %>
+            <li><%= link_to "一覧へ", sports_path %></li>
+            <li><%= link_to "カレンダー", blogs_path %></li>
             <li><%= link_to "新規登録", new_user_registration_path %></li>
             <li><%= link_to "ログイン", new_user_session_path %></li>
           <% end %>
         </ul>
-      </div>
+       </div>
+      <link rel="stylesheet" href="css/style.css">
     </header>
+    
     <main>
       <%= yield %>
     </main>
+  
   </body>
+  
 
   
 </html>

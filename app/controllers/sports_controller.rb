@@ -1,6 +1,10 @@
 class SportsController < ApplicationController
 
     before_action :authenticate_user!, only: [:new, :create]
+    def top
+      
+    end
+
     def index
         @sports = Sport.all
     end
