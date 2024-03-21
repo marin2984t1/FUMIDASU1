@@ -1,9 +1,22 @@
+img {
+    display: block;
+  }
+.sports-big{
+    justify-content: center;
+    margin-top:100px;
+}
+
 .sports-container{
+    width: 750px; 
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .sport{
     display: flex;
     flex-direction: column;
-    flex-wrap : wrap
+    margin-top: 15px;
+    
 }
+

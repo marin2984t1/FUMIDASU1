@@ -1,11 +1,20 @@
 <h1>日記</h1>
 <div class="sport">
-<%= image_tag @sport.image_url, size: "250x200" if @sport.image? %>
-  <p><%= @sport.theme %></p>
-  <p><%= @sport.about %></p>
-  <p><%= @sport.created_at %></p>
-  <%= button_to "編集する", edit_sport_path(@sport.id) %>
-  <%= button_to "削除する", sport_path(@sport.id), method: :delete %>
+<%= image_tag @sport.image_url, size: "800x500" if @sport.image? %>
+   <div class="wakuwaku">
+     <p><%= @sport.theme %></p>
+   </div>
+   <div class="wakuwaku-san">
+     <p><%= @sport.about %></p>
+    </div>
+    <div class="time">
+      <p><%= @sport.created_at %></p>
+    </div>
+
+    <div class="waku-san">
+      <%= button_to "編集する", edit_sport_path(@sport.id) %>
+      <%= button_to "削除する", sport_path(@sport.id), method: :delete %>
+    </div>
 </div>
 
 <%= link_to "一覧に戻る", sports_path %>

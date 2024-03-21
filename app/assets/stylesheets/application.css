@@ -25,19 +25,22 @@
     background-position: contain;
     background-repeat: no-repeat;
   }
+
   header {
     background-color: #f3ae36;
-    height: 100px;
+    height: 120px;
     font-weight: bold;
     display: flex;
     align-items: center;
   }
   header a {
     color: rgb(0, 0, 0); 
-    text-decoration: none; 
+    text-decoration: none;
   }
   header h1 {
     color: rgb(16, 13, 13);
+    margin-top: 12px;
+    margin-left: 15px;
   }
   .header-list {
     display: flex;
@@ -52,13 +55,6 @@
     list-style: none;
     margin-right: 40px;
   }
-  footer {
-    background-color: #f3ae36;
-    height: 200px;
-  }
-
-
- 
   .img-box {
     margin:0 auto;
  }
@@ -130,9 +126,6 @@
     background-size: cover;
     background-position: center center;
   }
-
-  
-  
   
   
   
